@@ -81,13 +81,58 @@ const Test = () => {
 
     return (
         <div className="container-md">
+            {/* <div className="filter" id="filter">
+                <div className="row">
+                    <div className="col-4">
+                        <div className="row">
+                            <div className="col-2">
+                                <label htmlFor="#type" className="form-label">Network</label>
+                            </div>
+                            <div className="col-8">
+                                <select name="type" id="type" className="form-select">
+                                    <option value="all">All</option>
+                                    <option value="Keysight">Keysight Network</option>
+                                    <option value="DLAN">Direct LAN</option>
+                                    <option value="DHCPv4">DHCP (IPv4)</option>
+                                    <option value="DHCPv6">DHCP (IPv6)</option>
+                                    <option value="private">Private (Switch)</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div className="col-6">
+                        <div className="row">
+                            <div className="col-2">
+                                <label htmlFor="#lxi-version" className="form-label">LXI Version</label>
+                            </div>
+                            <div className="col-6">
+                                <select name="version" id="version" className="form-select">
+                                    <option value="all">All</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="1.6">1.6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-2">
+                        <div className="row">
+                            <button className="col-6 btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
+            <br /><hr /><br />
             <div className="card">
                 <div className="card-header">
                     Select Test Cases
                 </div>
                 <div className="card-body">
                     <table className="table table-bordered">
-                        <thead>
+                        <thead className="table-dark">
                             <tr>
                                 <th>No.</th>
                                 <th>Test Cases</th>

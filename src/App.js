@@ -4,8 +4,9 @@ import {Routes,Route,BrowserRouter as Router} from "react-router-dom"
 // import logo from './logo.svg';
 // import './App.css';
 import Header from "./Pages/header.jsx";
+import Instrument from "./Pages/instrument.jsx";
 import Test from "./Pages/test.jsx";
-
+import TestCaseManagement from "./Pages/testcase.jsx";
 // function App() {
 //   return (
 //     <div className="App">
@@ -33,7 +34,10 @@ function App(){
           <Header></Header>
           <br/><br/>
           <Routes>
+             <Route path="/" element={<Instrument/>}/>
+            <Route path="/instrument" element={<Instrument/>}/>
             <Route path="/test" element={<Test/>}/>
+            <Route path="/test-case" element={<TestCaseManagement/>}/>
           </Routes>
         </Router>
     </div>
