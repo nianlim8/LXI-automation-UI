@@ -2,15 +2,27 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Modal from "../Components/modal";
 import Form from "../Components/form";
+import { Link, NavLink } from "react-router-dom";
+
 const Instrument = () => {
     const [instrument, setInstrument] = useState()
     const form = [
-        { name: "instrument_name", type: "text", label: "Instrument Name", id: 'instrument-name' },
+        {name: "instrument_name", type: "text", label: "Instrument Name", id: 'instrument-name' },
+        {name:"hpp_version",type:"text",label:"HPP version",id:"hpp-version"},
         {
-            name: "lxi-version", type: "select", id: 'lxi-version', label: "LXI version", options: [
+            name: "lxi-version", type: "select", id: 'lxi-version', label: "LXI version", 
+            options: [
                 { value: 1.5, label: '1.5' },
-                { value: 1.6, label: '1.6' },]
+                { value: 1.6, label: '1.6' },
+            ]
         },
+        {
+            name:"os",type:"select",id:"os",label:"OS Version",
+            options:[
+                {value:"Windows",label:"Windows"},
+                {value:"Linux",label:"Linux"}
+            ]
+        }
 
     ]
 
@@ -22,8 +34,8 @@ const Instrument = () => {
                 <div className="card-body">
                     <br />
                     <div className="text-end">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-                            ADD Instrument
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal">
+                            <i className="bi bi-plus-circle"></i> Instrument
                         </button>
 
                     </div>
@@ -62,7 +74,7 @@ const Instrument = () => {
                                         </ul>
                                     </div>
                                 </td> */}
-                                <td>
+                                {/* <td>
                                     <div class="btn-group">
                                         <button class="btn btn-secondary btn-sm" type="button">
                                             Configure
@@ -77,6 +89,13 @@ const Instrument = () => {
                                             <li><a class="dropdown-item" href="#"><i className="bi bi-trash"></i></a></li>
                                         </ul>
                                     </div>
+                                </td> */}
+                                <td>
+                                    <button className="btn btn-sm" title="Configure Instrument"><i className="bi bi-sliders"></i></button>
+                                    &emsp;
+                                    <a href="/test" title="Test Instrument" className="btn btn-sm"><i className="bi bi-gear text-primary"></i></a>
+                                    &emsp;
+                                    <a href="/delete" title="Delete Instrument" className="btn btn-sm"><i className="bi bi-trash text-danger"></i></a>
                                 </td>
                             </tr>
                         </tbody>

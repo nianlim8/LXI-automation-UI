@@ -81,7 +81,7 @@ const Test = () => {
 
     return (
         <div className="container-md">
-            {/* <div className="filter" id="filter">
+             <div className="filter" id="filter">
                 <div className="row">
                     <div className="col-4">
                         <div className="row">
@@ -120,11 +120,11 @@ const Test = () => {
 
                     <div className="col-2">
                         <div className="row">
-                            <button className="col-6 btn btn-primary">Search</button>
+                            <button className="col-6 btn btn-outline-primary"><i className="bi bi-filter"></i> Filter</button>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div> 
             <br /><hr /><br />
             <div className="card">
                 <div className="card-header">

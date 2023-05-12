@@ -22,16 +22,21 @@ const Form = ({ formFields }) => {
             //make use of useEffect
            
         }
+        
         setValid(isValid)
         setErrorMsg(errormsg)
        })
+       
     }
 
     const formSubmit = (event) =>{
-       
+       event.preventDefault()
         validation()
         console.log(formData)
-        event.preventDefault()
+        if(valid){
+            document.getElementById("closeModal").click()
+            event.target.reset()
+        }
     }
 
    
